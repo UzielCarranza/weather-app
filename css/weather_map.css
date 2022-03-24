@@ -1,0 +1,352 @@
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f1faee;
+}
+
+li {
+    list-style: none;
+}
+
+
+.card {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    height: auto;
+
+}
+
+.card-img-top {
+    width: 30%;
+}
+
+.card-body {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+
+}
+
+.card-body:hover {
+    box-shadow: 0 0 0 5px #fff, 0 0 0 10px rgb(70, 130, 180);
+    border: 2px solid rgb(100, 149, 237);
+    transform: scale(0.9);
+    color: #fff;
+    background-color: rgb(50, 206, 250);
+}
+
+.one-day {
+    background-color: rgb(50, 206, 250);
+}
+
+h3 {
+    color: #fff;
+}
+
+.one-day:hover {
+    box-shadow: 0 0 0 5px #fff, 0 0 0 10px rgb(70, 130, 180);
+    border: 2px solid rgb(100, 149, 237);
+    color: #333333;
+    background-color: rgb(50, 206, 250);
+}
+
+#navbar-location {
+    margin-bottom: 3em;
+}
+
+#map {
+    width: 90%;
+    height: 500px;
+    margin: auto;
+}
+
+/*
+dragable
+*/
+
+.coordinates {
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    position: absolute;
+    bottom: 40px;
+    left: 10px;
+    padding: 5px 10px;
+    margin: 0;
+    font-size: 11px;
+    line-height: 18px;
+    border-radius: 3px;
+    display: none;
+}
+
+.close-icon {
+    cursor: pointer;
+}
+
+.span-card {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    height: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    font-weight: bold;
+    text-shadow: 3px 3px #fff;
+}
+
+#weather {
+    width: 100%;
+    padding: 2px;
+}
+
+.title {
+    margin-left: 6em;
+    padding-left: 1.3em;
+}
+
+
+/*
+footer
+*/
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 50%;
+    margin: 4em auto auto;
+    padding-bottom: 3em;
+
+}
+
+@media only screen and (max-width: 600px) {
+    .card {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+
+    .card-body {
+        width: 25%;
+    }
+
+    .card-body:nth-child(5) {
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+    }
+
+    p {
+        text-align: center;
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin: 2% 0;
+        padding: 0;
+        align-items: center;
+        width: 100%;
+    }
+
+    .footer > li {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        border: 3px solid rgb(50, 206, 250);
+    }
+
+    .form-inline {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin: 1em;
+    }
+
+    #weather {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    #weather > .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    #weather > .card > .card-body {
+        border: 10px solid rgb(50, 206, 250);
+        width: 100%;
+        padding: 0 !important;
+        margin: 0 !important;
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    #weather > .card > .card-body > img {
+        width: 15%;
+    }
+
+    #weather > .card > .card-body > p {
+        width: 100%;
+    }
+
+    #weather-map > .card > .card-body {
+        border: 10px solid rgb(50, 206, 250);
+        width: 100%;
+
+    }
+
+    #weather-map > .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    #weather-map > .card > .card-body {
+        border: 10px solid rgb(50, 206, 250);
+        width: 100%;
+        padding: 0 !important;
+        margin: 0 !important;
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    #weather-map > .card > .card-body > img {
+        width: 15%;
+    }
+
+    #weather-map > .card > .card-body > p {
+        width: 100%;
+    }
+
+    .bottom {
+        width: 20% !important;
+        display: flex;
+        flex-flow: row wrap;
+        height: 2em;
+    }
+
+    #map {
+        width: 60%;
+        height: 950px;
+        margin: auto;
+    }
+
+    .mapbox-directions-steps {
+        height: 12em;
+    }
+}
+
+
+
+
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
+
+
+    #weather {
+        max-width: 100%;
+        display: flex;
+        flex-flow: column wrap;
+    }
+
+    #weather > .card {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    #weather > .card > .card-body {
+        display: flex;
+        flex-flow: row wrap;
+        width: 40%;
+        justify-content: flex-end;
+        border: 10px solid rgb(50, 206, 250);
+    }
+
+    #weather > .card > .card-body > p {
+        width: 100%;
+        height: 3em !important;
+        text-align: center;
+    }
+
+    .bottom {
+        width: 30% !important;
+        height: 2em;
+        margin-right: 8px;
+        padding: 0;
+    }
+    .card-img-top{
+        height: 8em;
+        margin: 0;
+    }
+    .card-body:nth-child(5){
+        max-width: 53% !important;
+        margin: 0 auto !important;
+    }
+    #weather-map{
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-around;
+        margin: 0 !important;
+    }
+    #weather-map > .card{
+        width: 100%;
+        margin: 0 !important;
+        padding: 0 !important;
+        display: flex;
+        flex-flow: row wrap;
+    }
+    #weather-map >.card>.card-body>.bottom{
+        width: 100% !important;
+        text-align: center;
+    }
+
+    #weather-map >.card>.card-body>img{
+        width: 100%;
+    }
+    #weather-map>.card>.card-body:nth-child(5){
+        max-width: 25% !important;
+        margin: 0 auto !important;
+    }
+    #weather-map>.card>.card-body{
+
+        border: 10px solid rgb(51, 206, 250);
+    }
+
+}
+
+
+.mapboxgl-ctrl-geocoder--icon-search {
+    display: none !important;
+}
